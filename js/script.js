@@ -5,13 +5,19 @@ const settings = {
     "method": "GET",
     "headers": {
         "X-RapidAPI-Host": "odds.p.rapidapi.com",
-        "X-RapidAPI-Key": "f0a1b48427mshfec022783697cb0p16a91ajsn3f6bcbd50715"
+        "X-RapidAPI-Key": "5061ae063f678a2de8f8172c41668633"
     }
 };
 
-$.ajax(settings).done(function (response) {
-    console.log(response);
+// $.ajax(settings).done(function (response) {
+//     console.log(response);
 
-});
+// });
 
-asdasdas
+const allSportsURL = "https://api.the-odds-api.com/v4/sports/?apiKey=5061ae063f678a2de8f8172c41668633"
+
+function getAllSports () {
+    $.ajax(allSportsURL).then(function(data) {
+    console.log('all sports are ready');
+    console.log(data);
+})}
