@@ -9,15 +9,28 @@ const settings = {
     }
 };
 
-// $.ajax(settings).done(function (response) {
-//     console.log(response);
-
-// });
-
+const $option = $('option');
+const $select = $('#select')
 const allSportsURL = "https://api.the-odds-api.com/v4/sports/?apiKey=5061ae063f678a2de8f8172c41668633"
 
-function getAllSports () {
-    $.ajax(allSportsURL).then(function(data) {
-    console.log('all sports are ready');
-    console.log(data);
-})}
+$(document).ready(function() {
+    getAllSports()
+})
+
+function getAllSports() {
+    $.ajax(allSportsURL).then(function (allSports) {
+        console.log('all sports are ready');
+        console.log(allSports);
+
+        for (let i = 0; [i] < allSports.length; i++) {
+            const options = [];
+            options.push(allSports[i].key);
+            $select.append(`<option>${options}</option>`);
+        }
+    })
+
+}
+
+
+
+
