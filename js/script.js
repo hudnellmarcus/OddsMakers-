@@ -8,12 +8,12 @@ const settings = {
         "X-RapidAPI-Key": "5061ae063f678a2de8f8172c41668633"
     }
 };
-
+const $form = $('form');
 const $option = $('option');
-const $select = $('#select')
+const $select = $('#select');
 const allSportsURL = "https://api.the-odds-api.com/v4/sports/?apiKey=5061ae063f678a2de8f8172c41668633"
 
-$(document).ready(function() {
+$(document).ready(function () {
     getAllSports()
 })
 
@@ -28,9 +28,21 @@ function getAllSports() {
             $select.append(`<option>${options}</option>`);
         }
     })
-
+  getOdds();
 }
+const oddsUrl = "https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey=5061ae063f678a2de8f8172c41668633&regions=us&markets=h2h,spreads&oddsFormat=american"
 
+$form.on('submit', getOdds)
+
+function getOdds() {
+    $.ajax(oddsUrl).then(function (odds) {
+        console.log(odds);
+    oddsUrl.forEach((line) => {
+  
+    })
+
+    })
+}
 
 
 
