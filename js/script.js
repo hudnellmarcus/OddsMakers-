@@ -11,16 +11,21 @@ const settings = {
 const $form = $('form');
 const $option = $('option');
 const $select = $('#select');
-const allSportsURL = "https://api.the-odds-api.com/v4/sports/?apiKey=5061ae063f678a2de8f8172c41668633"
-const oddsUrl = "https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey=5061ae063f678a2de8f8172c41668633&regions=us&markets=h2h,spreads&oddsFormat=american"
+const allSportsURL = "https://api.the-odds-api.com/v4/sports/?apiKey=cfc369a0682e9abfe063c7a2184ab763"
+const oddsUrl = "https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey=cfc369a0682e9abfe063c7a2184ab763&regions=us&markets=h2h,spreads&oddsFormat=american"
+const teams = [];
+const $matchups = $('#matchups');
+const $content1 = $('#content1');
+
+
 $(document).ready(function () {
     getAllSports()
 })
 
 function getAllSports() {
     $.ajax(allSportsURL).then(function (allSports) {
-        console.log('all sports are ready');
-        console.log(allSports);
+        // console.log('all sports are ready');
+        // console.log(allSports);
 
         for (let i = 0; [i] < allSports.length; i++) {
             const options = [];
@@ -28,24 +33,60 @@ function getAllSports() {
             $select.append(`<option>${options}</option>`);
         }
     })
-    getOdds();
 }
 
-$form.on('submit', getOdds)
-const $upcomingGames = $('.upcomingGames')
+$form.on('submit', getTeams())
 
-function getOdds() {
+const $upcomingGames = $('.upcomingGames');
+const upcomingOdds = [];
+
+function getTeams() {
     $.ajax(oddsUrl).then(function (odds) {
-        console.log(odds);
+        // console.log(odds);
+        // const homeTeams = [];
 
-        for (let i = 0; [i] < odds.length; i++) {
-            const upcomingOdds = [];
-            upcomingOdds.push(odds[i]);
-            $upcomingGames.text(`${odds}`);
-            console.log(upcomingOdds)
+        $.each(odds, function (index, value) {
+            const homeAway = value.home_team + " vs " + value.away_team;
+            // console.log(home_team);
+            // const upcomingOdds = [];
+            teams.push(homeAway);
+            // console.log(upcomingOdds);
+            // upcomingOdds.join();
+            // console.log(homeTeams);
+        })
+        // for (let i=0; [i] < upcomingOdds.length; i++){
+        // document.getElementById('hometeams').text(homeTeams);
+
+        for (const team of teams) {
+           
+            $matchups.append(`<li>${team}</li>`);
+
         }
     })
+
+
+
+
+    // console.log(teams);
+
 }
+
+
+
+
+// console.log(teams);
+
+// displayTeams = () => {
+//     // $('#matchups').empty()
+//     const $matchups = $('#matchups');
+//     const $teams = ('teams')
+//     const $homeAway = $('<li>')
+
+//     for (let i=0; [i] < teams.length; i++){
+//         $homeAway.append($teams[i]);
+
+// }}
+
 
 
 const navSlide = () => {
