@@ -6,42 +6,126 @@
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1.1fr 1.1fr 1.1fr 0.5fr;
+  grid-template-columns: 0.5fr 1.25fr 1.25fr 1fr;
+  grid-template-rows: 0.8fr 1.1fr 1.1fr 1.1fr 0.2fr;
   grid-template-areas:
     "nav nav nav nav"
     "sidebar form form form"
     "sidebar content1 content1 content1"
-    "sidebar content2 content2 content2"
+    "sidebar content1 content1 content1"
     "sidebar footer footer footer";
+}
+body {
+  background-color: slategray;
 }
 
 nav {
-  background-color: #a7ffeb;
+  display: flex;
+  /* background-color: #a7ffeb; */
   grid-area: nav;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+}
+
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+.navlist {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 #sidebar {
-  background: #53d2c3;
+  /* background: #53d2c3; */
   grid-area: sidebar;
 }
 
 form {
-  background-color: #1edcaf;
-  grid-area: form;
+  /* background-color: #1edcaf; */
+
+ display: flex;
+ flex-direction: column; 
+ align-items: center;
+ grid-area: form;
+ padding: 50px;
+
 }
 
+
+
 #content1 {
-  background-color: #65a79f;
+  /* background-color: #65a79f; */
   grid-area: content1;
 }
 
-#content2 {
+/* #content2 {
   background-color: #8ccabb;
-  grid-area: content2;
-}
+  grid-area: content2; 
+}*/
 
 footer {
-  background-color: #5bc0a9;
+  /* background-color: #5bc0a9; */
   grid-area: footer;
+}
+.burger {
+  display: none;
+}
+.burger > div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1.5fr 2.5fr 1fr;
+    grid-template-areas: "nav" "sidebar" "form" "content1" "footer";
+  }
+  body{
+    overflow: hidden;
+  }
+  .navlist {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #a7ffeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+  }
+  .navlist > li{
+    opacity: 100;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }
