@@ -43,36 +43,23 @@ const upcomingOdds = [];
 function getTeams() {
     $.ajax(oddsUrl).then(function (odds) {
         // console.log(odds);
-        // const homeTeams = [];
 
         $.each(odds, function (index, value) {
             const homeAway = value.home_team + " vs " + value.away_team;
             // console.log(home_team);
-            // const upcomingOdds = [];
+
             teams.push(homeAway);
             // console.log(upcomingOdds);
-            // upcomingOdds.join();
-            // console.log(homeTeams);
+
+            // console.log(teams);
         })
-        // for (let i=0; [i] < upcomingOdds.length; i++){
-        // document.getElementById('hometeams').text(homeTeams);
 
         for (const team of teams) {
-           
-            $matchups.append(`<li>${team}</li>`);
 
+            $matchups.append(`<li id="games">${team}</li>`);
         }
     })
-
-
-
-
-    // console.log(teams);
-
 }
-
-
-
 
 // console.log(teams);
 
@@ -86,8 +73,6 @@ function getTeams() {
 //         $homeAway.append($teams[i]);
 
 // }}
-
-
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
