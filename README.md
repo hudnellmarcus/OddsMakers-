@@ -42,7 +42,7 @@ Users can select from a range of upcoming games from sports leagues around the w
 
 
 ## <a name="deployment"></a>Deployed Link
-[Netlify](https://wonderful-brahmagupta-6a75d3.netlify.com)
+[GitHub](https://hudnellmarcus.github.io/OddsMakers-/) 
 
 * You can view the repository:
 [Github.com] (https://github.com/hudnellmarcus/OddsMakers-)
