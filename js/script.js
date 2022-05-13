@@ -16,8 +16,11 @@ const oddsUrl = "https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey=cf
 const teams = [];
 const $matchups = $('#matchups');
 const $content1 = $('#content1');
+const $upcomingGames = $('.upcomingGames');
+const upcomingOdds = [];
+// ^^add betting lines 
 
-
+// When page loads call function to populate select options
 $(document).ready(function () {
     getAllSports()
 })
@@ -34,12 +37,9 @@ function getAllSports() {
         }
     })
 }
-
+// does not work properly yet 
 $form.on('submit', getTeams())
 
-const $upcomingGames = $('.upcomingGames');
-const upcomingOdds = [];
-// use this array to pull odds
 function getTeams() {
     $.ajax(oddsUrl).then(function (odds) {
         // console.log(odds);
@@ -50,8 +50,6 @@ function getTeams() {
             // console.log(away_team);
 
             teams.push(homeAway);
-            // console.log(upcomingOdds);
-
             // console.log(teams);
         })
         for (const team of teams) {
