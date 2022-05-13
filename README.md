@@ -1,7 +1,7 @@
 # OddsMakers
 
 #### A full-stack web application built as first project.
-<img src="./Images/homeBackground.jpeg" alt="Connect Four Mainpage Screenshot"/>
+<img src="./Images/OddsMakers Homepage Screenshot.png" alt="OddsMakers Mainpage Screenshot"/>
 
 ## Description
 Odds Makers: A real-time betting odds agreggator from 12 of the world's best sportsbooks.
@@ -28,7 +28,7 @@ Users can select from a range of upcoming games from sports leagues around the w
 *can be found in project Images folder
 
 ## Trello Planning
-* https://trello.com/b/2jeHdFcV/project-1-connect-4
+* https://trello.com/b/GG34Jdim/oddsmakers
 
 ## <a name="design"></a>Design
 * Design elements implemented using HTML5 and CSS3. 
@@ -49,10 +49,12 @@ Users can select from a range of upcoming games from sports leagues around the w
 * If unable to view please go live locally through VS Code
     
 ## Works Cited:
+Responsive Navigation Bar Tutorial | HTML CSS JAVASCRIPT:
+https://youtu.be/gXkqy0b4M5g
 
+https://learn.jquery.com/using-jquery-core/
 
-
-
+https://developer.mozilla.org/en-US/
 
 
 
