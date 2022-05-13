@@ -19,13 +19,15 @@ Odds Makers: A real-time betting odds agreggator from 12 of the world's best spo
 * HTML5
 * CSS3
 * jQuery
+* AJAX
+* TheOdds API
 
 
 ## Features
 Users can select from a range of upcoming games from sports leagues around the world and access 'real-time' betting odds. 
 
 ## Whiteboard Images
-*can be found in project Images folder
+<img src="./Images/Wireframe Sketches.png" alt="Wireframe Sketches"/>
 
 ## Trello Planning
 * https://trello.com/b/GG34Jdim/oddsmakers
