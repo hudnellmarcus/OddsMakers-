@@ -45,7 +45,7 @@ Users can select from a range of upcoming games from sports leagues around the w
 [Netlify](https://wonderful-brahmagupta-6a75d3.netlify.com)
 
 * You can view the repository:
-[Github.com] 
+[Github.com] (https://github.com/hudnellmarcus/OddsMakers-)
 * If unable to view please go live locally through VS Code
     
 ## Works Cited:
