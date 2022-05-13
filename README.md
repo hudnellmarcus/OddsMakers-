@@ -22,7 +22,7 @@ Odds Makers: A real-time betting odds agreggator from 12 of the world's best spo
 
 
 ## Features
-Users can select from a range of upcoming games from sports leagues around the world. 
+Users can select from a range of upcoming games from sports leagues around the world and access 'real-time' betting odds. 
 
 ## Whiteboard Images
 *can be found in project Images folder
