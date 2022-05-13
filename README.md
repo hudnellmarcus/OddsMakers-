@@ -1,4 +1,4 @@
-# Connect-Four
+# OddsMakers
 
 #### A full-stack web application built as first project.
 <img src="./Images/homeBackground.jpeg" alt="Connect Four Mainpage Screenshot"/>
@@ -45,7 +45,7 @@ Users can select from a range of upcoming games from sports leagues around the w
 [Netlify](https://wonderful-brahmagupta-6a75d3.netlify.com)
 
 * You can view the repository:
-[Github.com](https://github.com/Gr8ness21/Connect-4)
+[Github.com] 
 * If unable to view please go live locally through VS Code
     
 ## Works Cited:
