@@ -1,6 +1,6 @@
 # OddsMakers
 
-#### A full-stack web application built as first project.
+#### A full-stack web application built as my first project.
 <img src="./Images/OddsMakers Homepage Screenshot.png" alt="OddsMakers Mainpage Screenshot"/>
 
 ## Description
