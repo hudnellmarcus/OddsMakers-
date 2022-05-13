@@ -59,7 +59,7 @@ https://learn.jquery.com/using-jquery-core/
 https://developer.mozilla.org/en-US/
 
 
-
+Special shoutout to Dave Packard for keeping me sane and helping me through some of the logic!
 
 
 
