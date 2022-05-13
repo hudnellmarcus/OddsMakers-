@@ -39,7 +39,7 @@ $form.on('submit', getTeams())
 
 const $upcomingGames = $('.upcomingGames');
 const upcomingOdds = [];
-
+// use this array to pull odds
 function getTeams() {
     $.ajax(oddsUrl).then(function (odds) {
         // console.log(odds);
@@ -47,15 +47,14 @@ function getTeams() {
         $.each(odds, function (index, value) {
             const homeAway = value.home_team + " vs " + value.away_team;
             // console.log(home_team);
+            // console.log(away_team);
 
             teams.push(homeAway);
             // console.log(upcomingOdds);
 
             // console.log(teams);
         })
-
         for (const team of teams) {
-
             $matchups.append(`<li id="games">${team}</li>`);
         }
     })

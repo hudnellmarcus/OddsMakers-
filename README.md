@@ -1,7 +1,7 @@
 # OddsMakers
 
 #### A full-stack web application built as my first project.
-<img src="./Images/OddsMakers Homepage Screenshot.png" alt="OddsMakers Mainpage Screenshot"/>
+<img src="./Images/OddsMakers Homepage.png" alt="OddsMakers Mainpage Screenshot"/>
 
 ## Description
 Odds Makers: A real-time betting odds agreggator from 12 of the world's best sportsbooks.
